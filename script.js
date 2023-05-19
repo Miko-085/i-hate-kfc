@@ -6,7 +6,7 @@ function getCurrentTime() {
 
 // Calculate the elapsed time in seconds
 function calculateElapsedTime() {
-  var startTime = new Date(2023, 4, 9, 8, 0, 0); // May is represented by 4 (0-indexed)
+  var startTime = new Date(2023, 4, 19, 12, 0, 0); // May is represented by 4 (0-indexed)
   var currentTime = getCurrentTime();
   var elapsedTime = Math.floor((currentTime - startTime) / 1000);
   return elapsedTime;
