@@ -5,8 +5,16 @@ function getCurrentTime() {
 }
 
 // Calculate the elapsed time in seconds
-function calculateElapsedTime() {
+function calculateElapsedTimeKFC() {
   var startTime = new Date(2023, 4, 19, 12, 0, 0); // May is represented by 4 (0-indexed)
+  var currentTime = getCurrentTime();
+  var elapsedTime = Math.floor((currentTime - startTime) / 1000);
+  return elapsedTime;
+}
+
+// Calculate the elapsed time in seconds
+function calculateElapsedTimeWR() {
+  var startTime = new Date(2023, 6, 22, 9, 30, 0); 
   var currentTime = getCurrentTime();
   var elapsedTime = Math.floor((currentTime - startTime) / 1000);
   return elapsedTime;
@@ -36,9 +44,13 @@ function padZero(number) {
 
 // Update the timer display
 function updateTimer() {
-  var elapsedTime = calculateElapsedTime();
-  var formattedTime = formatTime(elapsedTime);
-  document.getElementById("timer").textContent = formattedTime;
+  var elapsedTimeKFC = calculateElapsedTimeKFC();
+  var formattedTimeKFC = formatTime(elapsedTimeKFC);
+  document.getElementById("kfc-timer").textContent = formattedTimeKFC;
+
+  var elapsedTimeWR = calculateElapsedTimeWR();
+  var formattedTimeWR = formatTime(elapsedTimeWR);
+  document.getElementById("wr-timer").textContent = formattedTimeWR;
 }
 
 // Update the timer every second
