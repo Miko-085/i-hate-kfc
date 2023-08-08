@@ -14,7 +14,7 @@ function calculateElapsedTimeKFC() {
 
 // Calculate the elapsed time in seconds
 function calculateElapsedTimeWR() {
-  var startTime = new Date(2023, 6, 22, 9, 30, 0); 
+  var startTime = new Date(2023, 7, 8, 16, 0, 0); 
   var currentTime = getCurrentTime();
   var elapsedTime = Math.floor((currentTime - startTime) / 1000);
   return elapsedTime;
